@@ -1,0 +1,50 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas:"header header header header"
+                        "hero hero hero hero"
+                        "about about about about"
+                        "services services services services"
+                        "projects projects projects projects"
+                        "footer footer footer footer";
+
+    grid-template-columns: repeat(4, 1fr);   
+    font-size: 1.6rem;
+    font-family: 'roboto',sans-serif;
+    font-weight: 400;                     
+}
+
+
+
+.header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+.hero{
+    grid-area: hero;
+    background-color: blueviolet;
+}
+
+.about{
+    grid-area: about;
+    background-color: chartreuse;
+}
+
+.services{
+    grid-area: services;
+    background-color: cornflowerblue;
+}
+
+.projects{
+    grid-area: projects;
+    background-color:darkgoldenrod ;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: deeppink;
+}
