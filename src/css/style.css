@@ -19,10 +19,7 @@ body {
 
 
 
-.projects {
-    grid-area: projects;
-    background-color: darkgoldenrod;
-}
+
 
 .footer {
     grid-area: footer;
@@ -175,7 +172,7 @@ body {
     background-size: cover;
 }
 
-@media (max-width:425px){
+@media (max-width: 425px){
     .about .item{
         text-align: center;
     }
@@ -183,6 +180,7 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
     }
+}
 
 
         /* SERVICES */
@@ -235,3 +233,36 @@ body {
 }
 
 
+
+            /* Projects */
+
+
+.projects {
+     grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.projects img{
+    height: 100%;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.projects a:hover img{
+    opacity: 0.8;
+}
+
+@media (max-width:768px){
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:425px){
+    .projects{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
