@@ -21,11 +21,6 @@ body {
 
 
 
-.footer {
-    grid-area: footer;
-    background-color: deeppink;
-}
-
 
 
 /* HEADER */
@@ -265,4 +260,59 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
     }
+}
+
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: lightgreen;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer h4{
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer nav{
+    margin: 50px 0;    
+}
+
+.footer nav ul{
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.footer nav ul li a{
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.footer nav ul li a:hover{
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer .social i{
+    font-size: 2rem;
+}
+
+.footer .social a{
+    margin: 20px;   
+    transition: 0.3s;
+}
+
+.footer .social a:hover{
+    font-weight: 700;
+    color: #fff;
 }
