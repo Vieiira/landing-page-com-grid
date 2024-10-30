@@ -1,30 +1,74 @@
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     display: grid;
-    grid-template-areas:"header header header header"
-                        "hero hero hero hero"
-                        "about about about about"
-                        "services services services services"
-                        "projects projects projects projects"
-                        "footer footer footer footer";
+    grid-template-areas: "header header header header"
+        "hero hero hero hero"
+        "about about about about"
+        "services services services services"
+        "projects projects projects projects"
+        "footer footer footer footer";
 
-    grid-template-columns: repeat(4, 1fr);   
+    grid-template-columns: repeat(4, 1fr);
     font-size: 1.6rem;
-    font-family: 'roboto',sans-serif;
-    font-weight: 400;                     
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+}
+
+.services {
+    grid-area: services;
+    background-color: cornflowerblue;
+}
+
+.projects {
+    grid-area: projects;
+    background-color: darkgoldenrod;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: deeppink;
 }
 
 
 
-.header{
+/* HEADER */
+
+
+.header {
     grid-area: header;
     background-color: #fff;
 }
 
-.hero{
+.header .header-container {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header a:hover h1 {
+    color: coral;
+}
+
+
+
+
+
+/* HERO */
+
+
+.hero {
     grid-area: hero;
     height: 89vh;
     background: url('../images/lemons.jpg') center center no-repeat;
@@ -35,58 +79,14 @@ body{
     position: relative;
 }
 
-.about{
-    grid-area: about;
-    background-color: chartreuse;
-}
 
-.services{
-    grid-area: services;
-    background-color: cornflowerblue;
-}
-
-.projects{
-    grid-area: projects;
-    background-color:darkgoldenrod ;
-}
-
-.footer{
-    grid-area: footer;
-    background-color: deeppink;
-}
-
-
-
-
-
-.header .header-container{
-    display: flex;
-    padding: 20px 40px;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 75px;
-
-}
-
-.header h1{
-    font-size: 3rem;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.header a:hover h1{
-    color: coral;
-}
-
-
-
-.hero h2{
+.hero h2 {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 4rem;
 }
 
-.hero:after{
+.hero:after {
     content: url('../images/seta_preta.png');
     position: absolute;
     height: 35px;
@@ -95,17 +95,85 @@ body{
 }
 
 
-@-webkit-keyframes downarrow{
-    0%{-webkit-transform: translateY(0);opacity: 0.4;}
-    100%{-webkit-transform: translateY(0.4em);
-    opacity: 0.9;}
+@-webkit-keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.4em);
+        opacity: 0.9;
+    }
 }
 
-@media (max-width:425px){
-    .hero{height: 60vh;
+@media (max-width:425px) {
+    .hero {
+        height: 60vh;
     }
 
-    .hero h2{
+    .hero h2 {
         font-size: 2.5rem;
     }
+}
+
+
+
+        /* ABOUT */
+
+
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.about .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.about .item h3 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.about .item p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.about .item .btn-know-more {
+    font-size: 1.6rem;
+    align-self: flex-start;
+}
+
+.about .btn-know-more {
+    font-weight: 700;
+}
+
+
+
+.about .image {
+    height: 100%;
+    width: 100%;
+}
+
+.about .image.rigth {
+    background: url(../images/bridge.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.about .image.left {
+    background: url(../images/sky.jpg) center center no-repeat;
+    background-size: cover;
 }
